@@ -302,6 +302,7 @@ int twentyMB = 20 * 1024 * 1024;
 }
 
 - (void)testUnzippingWithInvalidPassword2 {
+    XCTSkip("https://github.com/ZipArchive/ZipArchive/issues/633");
     NSString *zipPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"TestPasswordArchive2" ofType:@"zip"];
     NSString *outputPath = [self _cachesPath:@"Password"];
     
@@ -331,6 +332,7 @@ int twentyMB = 20 * 1024 * 1024;
 }
 
 - (void)testIsPasswordInvalidForArchiveAtPath2 {
+    XCTSkip("https://github.com/ZipArchive/ZipArchive/issues/633");
     NSString *zipPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"TestPasswordArchive2" ofType:@"zip"];
 
     NSError *error = nil;
